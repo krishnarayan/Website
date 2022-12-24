@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" > 
+<meta name="viewport" content="width=deivce-width, initial-scale=1.0">
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<title>Registration form</title>
+<script> 
+    function Redirect(){
+        window.location = "demodefo1.html"
+    }
+    </script>
+    <style>
+        *{
+    margin:0;
+    padding: 0;
+    box-shadow: border-box;
+    font-family: Century Gothic;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background:url(blueee.png);
+    
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+  @keyframes animate {
+       from {top:200px;}
+       to   {top:1px;}
+  }
+  #slideset{
+    animation-name: animate;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards;
+  }
+.container1{
+    position:relative;
+    animation:animate 1s ease-in forwards;
+    max-width: 800px;
+    border-radius:6px;
+    padding: 30px;
+    margin: 0 15px;
+    width: 100%;
+    height:800px;
+    animation-name: example;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
+    background:#ffffff40;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px -5px #00000030;
+    
+}
+  
+.container1 header{
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.container1 header::before{
+    content:'';
+    position: absolute;
+    left:50px;;
+    top:60px;
+    height: 3px;
+    width: 40px; 
+    border-radius:8px;
+    background-color:#4070f4;
+}
+.container1 form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 90%;
+    
+}
+.container1 form .form{
+    position: absolute;
+
+}
+.container form .form.second{
+    opacity:0;
+    pointer-events:none;
+}
+form.secActive .form.second{
+    opacity:1;
+    pointer-events:auto;
+}
+form.secActive .form.first{
+    opacity:0;
+    pointer-events:none;
+}
+.container1 form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color:#333;
+}
+.container1 form .fields1{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .fields1 .inputbox{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction:column;
+    margin: 4px 0;
+}
+.inputbox label{
+    font-size:12px;
+    font-weight:500;
+    color:#2e2e2e;
+}
+.inputbox input{
+    padding: 0 15px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid ;
+    border-radius:5px;
+    color:#333;
+    height: 42px;
+    margin: 8px 0;
+    pointer-events:pointer;
+}
+.inputbox input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.inputbox input[type='date']{
+    color: #707070;
+}
+.inputbox input[type='date']:valid{
+    color: #333;
+}
+
+.radio-container{
+ font-size: 15px;
+ padding: 10px;
+}
+
+.label{
+    position: relative;
+    cursor:pointer;
+    font-size:15px;
+    padding-right: 32px;
+}
+
+.container1 form button, .backBtn{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height: 35px;
+    max-width: 200px;
+    width:110px;
+    border:none;
+    outline:none;
+    color:#fff;
+    background-color:#4070f4;
+    border-radius:5px;
+    margin: 25px 0;
+    transition:all 0.3s liear;
+    cursor: pointer;
+}
+input[type="radio"]{
+    font-size:80px;
+}
+form button:hover{
+    background-color:#265df2;
+}
+form button i{
+    margin: 0 6px;
+    font-size: 25px;
+    margin-bottom:-2px;
+}
+form .buttons{
+    display: flex;
+    align-items: center;
+}
+form .buttons button{
+    margin-right: 20px;
+}
+.buttons .backBtn .nextBtn{
+    position: relative;
+    bottom: 0px;
+    right:10px;
+}
+table {
+    width:100%;
+    height:70%;
+}
+input[type="number"]{
+    width:40px;
+    height:30px;
+    outline:none;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.subs{
+    width:50px;
+}
+table, th, td {
+   height: 5px;
+}
+
+@media (max-width: 750px) {
+  .container1 form{
+      overflow-y:scroll;
+
+  }
+  .container1 form::-webkit-scrollbar{
+      display: none;
+  }
+   form .fields1 .inputbox{
+       width: calc(100% / 2 - 25px);
+   }
+}
+@media (max-width: 550px) {
+    form .fields1 .inputbox{
+        width: 100%;
+    }
+  
+}
+input{
+    background:#ffffff40;
+}
+label{
+    font-size:medium;
+}
+    </style>
+
+</head>
+<body> 
+    
+        <div class="container1" id="slideset">
+            <header><ion-icon style="color:#1e96ff;" name="reader-outline"></ion-icon>Registration</header>
+   <form class="form">
+        <div class="form second">
+                <u><span class="title">Personal Details:</span></u>
+    
+                <div class="fields1">
+                
+                    <div class="inputbox">
+                        <u><label style="font-size:14px; font-weight:540;"><abbr title="Hall ticket number" style="text-decoration:none;">H.T.NO:</abbr></label></u>
+                        <input id="result-hallticket" type="text" onkeyup="this.value=this.value.toUpperCase()" placeholder="Enter Hallticket no:" required>
+                        </div>
+
+                         <div class="inputbox">
+                        <u><label style="font-size:14px; font-weight:540;"><abbr style="text-decoration:none" title="Today">Date:</abbr></label></u>
+                        <input type="date" required>
+                    </div>
+
+                    <div class="inputbox">
+                    <b><u><label style="font-size:14px; font-weight:540;">Student Name:</label></u></b>
+                    <input type="text" onkeyup="this.value=this.value.toUpperCase()" placeholder="Enter your Name" required>
+                    </div>
+
+                    <div class="inputbox">
+                       <u><label style="font-size:14px; font-weight:540;">Father name:</label></u>
+                        <input type="text" onkeyup="this.value=this.value.toUpperCase()" placeholder="Enter your father name:" required>
+                    </div>
+
+                    <div class="inputbox">
+                        <b><u><label style="font-size:14px; font-weight:540;">Branch & Spacializtion:</label></u></b>
+                        <input type="text" onkeyup="this.value=this.value.toUpperCase()" placeholder="Enter your Branch" required>
+                    </div>
+
+                    <div class="inputbox">
+                        <u><label style="font-size:14px; font-weight:540;">Date Of Birth:</label></u>
+                        <input type="date" onkeyup="this.value=this.value.toUpperCase()" required>
+                     </div>
+                     <div>
+                         <label>Regulation:</label>
+                        <select name="" id="" style="pointer-events:pointer;">
+                            <option value="">--Select---</option>
+                            <option value="">R10</option>
+                            <option value="">R13</option>
+                            <option value="">R16</option>
+                            <option value="">R19</option>
+                            <option value="">R20</option>
+                        </select>
+                     </div>
+            
+                        <div class="radio-container">
+                        <b><p>Gender:</p></b>
+                        <div class="radio-container">
+                        <input style="pointer-events:cursor;" type="radio" id="male" name="gender"/>
+                        <span class="label">Male</span>
+                        
+                        <input style="pointer-events:cursor;"type="radio" id="female" name="gender"/>
+                        <span class="label">Female</span>
+                        
+                        <input style="pointer-events:cursor;"type="radio" id="others" name="gender"/>
+                        <span class="label">Others</span>
+
+                        </div>
+                        </div>
+                        </div>
+
+
+       <strong><label class="num" for="Num">Total No.Subs:</label></strong>
+       <input type="number" name="test_name" min="1" max="10">
+     <table border="1" height="70px" cellspacing="0">
+      <thead class="headt">
+          <tr>
+            <th>S No.</th> 
+              <th colspan="2">Subject Code & Name</th>
+              <th class="subs">Select Subs</th>
+          </tr>
+          <tr>
+              <th colspan="4">THEROY</th>
+              </tr>
+              <tr>
+              <th></th> 
+              <th>Code</th>
+              <th rowspan="1">Name Of Subject</th>
+              <th></th>
+          </tr>
+          </thead >
+         <tbody>
+          <tr>
+             <th>1</th>
+             <th>R1931051 </th>
+             <th>DATA WAREHOUSING AND DATA MINING</th>
+             <th><input type="checkbox" name=""></th>
+
+          </tr>
+          <tr>
+            <th>2</th>
+            <th>R1931052</th>
+            <th>COMPUTER NETWORKS</th>
+            <th><input type="checkbox" name=""></th></th>
+         </tr>
+         <tr>
+            <th>3</th>
+            <th>R1931053</th>
+            <th>COMPILER DESIGN</th>
+            <th><input type="checkbox"></th></th>
+         </tr>
+         <tr>
+            <th>4</th>
+            <th>R1931054</th>
+            <th>ARTIFICIAL INTELLIGENCE</th>
+            <th><input type="checkbox"></th></th>
+         </tr>
+         <tr>
+            <th>5</th>
+            <th>R193105B</th>
+            <th>PRINCIPLES OF PROGRAMMING LANGUAGES</th>
+            <th><input type="checkbox"></th></th>
+         </tr>
+         <tr>
+            <th>6</th>
+            <th></th>
+            <th></th>
+            <th><!---<input type="checkbox">--></th>
+         </tr>
+         </tbody>
+         <thead class="headt">
+             <tr>
+                <th colspan="4">PRACTICALS</th>
+             </tr>
+             <tbody>
+                <tr>
+                    <th>7</th>
+                    <th>R1931055</th>
+                    <th>COMPUTER NETWORKS LAB</th>
+                    <th><input type="checkbox" name="check"></th></th>
+                 </tr>
+                 <tr>
+                    <th>8</th>
+                    <th>R1931056</th>
+                    <th>AI TOOLS & TECHNIQUES LAB</th>
+                    <th><input type="checkbox" name="check"></th></th>
+                 </tr>
+                 <tr>
+                    <th>9</th>
+                    <th>R1931057</th>
+                    <th> DATA MINING LAB </th>
+                    <th><input type="checkbox"></th></th>
+                 </tr>
+             </tbody>
+      </thead>
+     </table>
+                        <div class="buttons">
+            <button class="backBtn" value="Redirect Me" onclick="Redirect();">
+                    <i class="uil uil-navigatior"><ion-icon name="arrow-back-circle-outline"></ion-icon></i>
+                    <span class="btnText">Back</span>
+                </button>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Payment</span>
+                        <i class="uil uil-navigatior"><ion-icon name="arrow-forward-circle-outline"></ion-icon></i>
+                </button>
+               
+            </div>
+            </div>
+   </form>
+   
+</div>
+<srcipt src="reg.js"></srcipt>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<htm lang="en">
+    <head>
+<script>
+function validate()
+    {
+        var username=document.getElementById("username").value;
+        var password=document.getElementById("password").value;
+        if(username == "anil35@gmail.com" && password =="146757")
+        {
+            alert("Login success");
+            return false;
+        }
+        else{
+        alert("Login failed");
+        }
+    }
+    </script>
+      <meta charset="UTF-8">
+      <title>Examcell login</title> 
+
+      <style>
+          *{
+    margin:0;
+    padding:0;
+    font-family:cursive;
+}
+body{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    background:url(blueee.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+
+}
+.container{
+    position:relative;
+    padding: 70px 40px;
+    background:#fff;
+    border-radius: 10px;
+    transition: 0.300s;
+    background:#ffffff40;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px -5px #00000030;
+}
+.container h2{
+    color: #111;
+    margin-bottom:45px;
+    line-height:1em;
+    font-weight:500;
+    padding-left:10px;
+    border-left:5px solid #1E96FF;
+}
+.container .inputBox{
+    position:relative;
+    width: 300px;
+    height:46px;
+    margin-bottom:35px;
+}
+.container .inputBox:last-child{
+    margin-bottom:0;
+}
+.containe .inputBox ,input,button{
+ position:absolute;
+ top:0;
+ left:0;
+ width:100%;
+ border:1px solid #111;
+ background:transparent;
+ padding:10px;
+border-radius:4px;
+box-sizing:border-box;
+outline:none;
+font-size:16px;
+color:#111;
+font-weight:300;
+}
+.container .inputBox  span{
+    position: absolute;
+    top:1px;
+    padding: 10px;
+    display:inline-block;
+    font-size:16px;
+    color:#111;
+    font-weight:300;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .inputBox  input:focus ~  span,
+.container .inputBox  input:valid ~  span
+{
+    transform: translateX(-10px) translateY(-32px);
+    font-size:12px;
+}
+.container .inputBox  button{
+    background:#4070ff;
+    color:#ffffFF;
+    border:none;
+    max-width: 120px;
+    cursor:pointer;
+    font-weight:500;
+    font-family:cursive; 
+}
+.container .inputBox  button:hover{
+    background:linear-gradient( 180deg, #33ccff, #1e96ff);
+    box-shadow:#1E96FF 0px 0px 7px 0px;
+}
+img{
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:-60px; 
+    left:calc(50% - 50px); 
+}  
+.container input:focus,
+.container input:valid{
+    box-shadow: 0 5px 15px rgba(35, 154, 252, 0.2);
+}  
+      </style>
+    </head>
+    <body> 
+        <div class="container">
+             <img src="Cell.png">
+<h2>Login</h2>
+<form>
+    <div class="inputBox">
+        <input type="mail" id="username" required="required" >
+          <span>User Id</span>
+          </div>
+    <div class="inputBox">
+  <input type="password" id="password" required="required" >
+    <span>Password</span>
+    </div>
+<div class="inputBox">
+    <button type="submit" onclick="validate()">Log in</button>
+</div>
+</form>
+ </div>
+    </body>
+</html>

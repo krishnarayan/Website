@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" > 
+<meta name="viewport" content="width=deivce-width, initial-scale=1.0">
+
+<meta http-equiv="refresh" content=" url=/Demodefo.html">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<title>Registration form1</title>
+<style>
+    *{
+    margin:0;
+    padding: 0;
+    box-shadow: border-box;
+    font-family: Century Gothic;
+}
+body{
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background:url(blueee.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.container{
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    border-radius:6px;
+    padding: 30px;
+    margin: 0 15px;
+    transition: 3s;
+    background:#ffffff40;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px -5px #00000030;
+}
+  @keyframes animate {
+   from {bottom:200px;}
+   to  {bottom:0px;}
+  }
+  #slideset{
+    animation-name: slideset;
+    animation-duration: 0.2s;  
+    animation-fill-mode: forwards;
+    animation: animate 1s ease-in forwards;
+  }
+.container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.container header::before{
+    content:'';
+    position: absolute;
+    left:20px;
+    bottom:-6px;
+    height: 3px;
+    width: 37px; 
+    border-radius:8px;
+    background-color:#4070f4;
+}
+.container form{
+    position: relative;
+    margin-top:16px;
+    min-height: 290px;
+
+}
+
+.container form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size:16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color:#333;
+}
+ .input-field{
+  padding-bottom:10px;
+  padding-top:5px;
+    align-items:center;
+    justify-content: center ;
+}
+.input-field label{
+    font-size: 15px;
+    font-weight: 500;
+    color:#2e2e2e;
+}
+.input-field input{
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    color:#333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding:0 15px;
+    height: 42px;
+    margin: 8px 0;
+    border:1px solid #aaa;
+}
+.input-field input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+select{
+    border-radius: 5px;
+    outline:none;
+}
+
+.input-field select{
+    color:#1e96ff;
+}
+.input-field select:valid{
+    color:#333;
+}
+
+select:hover{
+    box-shadow:5px 5px 10px -6px rgba(0,0,0,0.9);
+}
+.container form button{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  height: 40px;
+  max-width:200px;
+  width:120px;
+  border:none;
+  outline:none;
+  color:#fff;
+  background-color:#4070f4;
+  border-radius:5px;
+  margin: 25px 0;
+  transition:all 0.3s linear;
+  cursor: pointer;
+}
+form button:hover{
+    background-color:#265df2;
+}
+form button {
+    margin: 0 5px ;
+}
+i{
+    margin-top: 5px;
+    margin-left: 4px;
+}
+input, select{
+    background:#ffffff40;
+}
+</style>
+</head>
+<body >
+
+    <div class="container" id="slideset">
+
+        <header><ion-icon style="color: #1e96ff;"name="paper-plane-outline"></ion-icon>Sign up</header>
+      <form action="" class="form" name="form1">
+       <div class="form first">
+           <div class="details personal">
+               <u><span class="title">Student details:</span></u>
+    
+               <div class="fields">
+                   <div class="input-field">
+                       <label>HallTicket NO:-</label>
+                       <input type="text" name="hallticket" id="hallticket" onkeyup="this.value=this.value.toUpperCase();" placeholder="Enter the H.T.No:" required="true">
+                   </div>
+    
+    
+                   <div class="input-field">
+                       <label>Exam:</label>
+                      <select id="btech" required>
+                          <option  value="1">I</option>
+                          <option  value="2">II</option>
+                          <option  value="3">III</option>
+                          <option  value="4">IV</option>
+                      </select> 
+                      <span>B.Tech</span>
+                      <select id="sem">   
+                          <option value="1">I</option>
+                          <option value="2">II</option>
+                      </select>
+                      <span>Sem.</span>
+                   </div>
+    
+    
+           <div class="input-field">
+                       <label>Sem type:</label>
+                       <select id="type">   
+                           <option value="Regular">Regular</option>
+                           <option value="Supply">Supply</option>
+                       </select>
+                   </div>
+    
+                   <div class="input-field">
+                       <label>Regulation:</label>
+                       <select id="Re">   
+                           <option value="R16">R16</option>
+                           <option value="R19">R19</option>
+                           <option value="R20">R20</option>
+                       </select>
+                       </div>
+              <button id="submit" class="nextBtn" value="Submit">Next<i class="uil uil-navigator"><ion-icon name="send"></ion-icon></i>
+              </button>
+               </div>
+           </div>
+           </div>
+           </form>
+           </div>
+           </body>
+           </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>hallticket</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    *{
+    padding:0;
+    margin:0;
+    font-family:cursive;
+}
+body{
+    justify-content: center;
+    text-align:center;
+    background:#3d4152;
+    margin-top: 30px;
+
+}
+label{
+    font-size: 20px;
+    color:rgb(156, 139, 250);
+}
+input[type='text']{
+    outline:none;
+    width:30vh;
+    height:29px;
+    border-radius: 5px;
+    border:2px solid #1e96ff;
+}
+.container{
+    position:relative;
+    max-width: 800px;
+    border-radius:6px;
+    padding: 30px;
+    top: 20px;
+    margin-left: 350px;
+    width: 700px;
+    height:200vh;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+input[type="submit"]{
+    width: 80px;
+    height: 26px;
+    border-radius: 5px;
+    outline:none;
+    border:rgb(156, 139, 250);
+    background:aquamarine ;
+}
+input[type="submit"]:hover{
+    border: 2px solid #fff;
+}
+
+
+</style>
+    </head>
+    <body>
+        <div>
+        <label>
+         Enter St. hallticket Number:
+        </label>
+<input type="text" onkeyup="this.value=this.value.toUpperCase();" placeholder="Enter the Hallticket No.">
+<input type="Submit">
+</div>
+
+
+<div class="container">
+<form  class="form" action="">
+
+</form>
+</div>
+    </body>
+</html>
